@@ -11,6 +11,7 @@ following the steps and base prosess of [Adeel Imran](https://medium.freecodecam
 * Add support for async/await in our code
 * Create a NodeJS server using ExpressJS for our production build
 * Code Splitting
+* Prettie code implementing by the estlint come from [Wesbos](https://github.com/wesbos/eslint-config-wesbos)
 
 ### Installing
 has 2 configurations production and development
@@ -22,3 +23,4 @@ after that you can run a dev hot server to develop
 ```
 npm run start
 ```
+### prety code 
