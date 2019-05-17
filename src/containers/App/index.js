@@ -4,10 +4,14 @@ import './App.scss';
 class App extends React.Component {
     state = {
       CaptainKirkBio: {},
+      Foo: null, // Foo is out component
     };
   
     componentDidMount() {
       this.onGetKirkBio();
+      import(/* webpackChunkName: 'Foo' */ '../../UI/Foo').then(Foo => {
+        this.setState({ Foo: Foo.default });
+      });
     }
   
     onGetKirkBio = async () => {
@@ -31,9 +35,12 @@ class App extends React.Component {
     };
   
     render() {
-      const { CaptainKirkBio } = this.state;
+      const { CaptainKirkBio, Foo } = this.state;
       return (
         <div className="app">
+          <h2>VERSION: {process.env.VERSION}</h2>
+          <h2>PLATFORM: { process.env.PLATFORM}</h2>
+          <h2>NODE_ENV: {process.env.NODE_ENV}</h2>
           <img alt="wolftrax-green" src="/dist/images/wolftrax-green.jpg" className="app-header" />
           <p>
             We are a most promising species, Mr. Spock, as predators go. Did you know that? I
@@ -48,6 +55,7 @@ class App extends React.Component {
               <p style={{ wordBreak: 'break-all' }}>{JSON.stringify(CaptainKirkBio)}</p>
             )}
           </section>
+          {Foo ? <Foo /> : <p>Foo is loading</p>}
         </div>
       );
     }
