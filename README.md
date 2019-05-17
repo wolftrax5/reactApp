@@ -8,6 +8,9 @@ following the steps and base prosess of [Adeel Imran](https://medium.freecodecam
 * Dividing your Webpack configuration into chunks
 * Generating a visualizer in production build to check which chunk of code is how big and what are the dependencies of the chunks. Super useful.
 * Support for static files
+* Add support for async/await in our code
+* Create a NodeJS server using ExpressJS for our production build
+* Code Splitting
 
 ### Installing
 has 2 configurations production and development
