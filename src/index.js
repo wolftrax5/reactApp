@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App'
-
+import App from './containers/App';
 
 console.log('process.env.VERSION', process.env.VERSION); // custom
 console.log('process.env.PLATFORM', process.env.PLATFORM); // custm

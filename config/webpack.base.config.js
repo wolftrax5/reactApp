@@ -1,4 +1,5 @@
 // base code of webpack to multiple configs
+// the estlint come from https://github.com/wesbos/eslint-config-wesbos
 const path = require('path');
 const webpack = require('webpack');
 const merge = require("webpack-merge");
