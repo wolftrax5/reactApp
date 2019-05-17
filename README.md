@@ -23,4 +23,3 @@ after that you can run a dev hot server to develop
 ```
 npm run start
 ```
-### prety code 
