@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './containers/App';
+import RouterApp from './containers/RouterApp';
 
-console.log('process.env.VERSION', process.env.VERSION); // custom
-console.log('process.env.PLATFORM', process.env.PLATFORM); // custm
-console.log('process.env.NODE_ENV', process.env.NODE_ENV); // by webpack
+console.log(`%c process.env.VERSION ${process.env.VERSION} `, 'color: white; background-color: #1DBF5E;'); // custom
+console.log(`%c process.env.PLATFORM ${process.env.PLATFORM} `, 'color: white; background-color: #1DBF5E;'); // custom
+console.log(`%c process.env.NODE_ENV ${process.env.NODE_ENV} `, 'color: white; background-color: #1DBF5E;'); // by webpack
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<RouterApp />, document.getElementById('app'));
