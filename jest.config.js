@@ -13,6 +13,10 @@ module.exports = {
   
     // An array of file extensions your modules use
     moduleFileExtensions: ['js', 'json', 'jsx'],
+
+    moduleNameMapper: {
+      "^.+\\.(css|less|scss)$": "babel-jest"
+    },
   
     // The paths to modules that run some code to configure or set up the testing environment before each test
     setupFiles: ['<rootDir>/enzyme.config.js'],
