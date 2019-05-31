@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './Foo.scss';
 
 const Foo = ({ text }) => (
-  <div className='Foo'>
+  <div className="Foo">
     <p>I am Foo! Pleasure to meet you. {text}</p>
   </div>
 );
