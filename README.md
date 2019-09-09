@@ -18,7 +18,7 @@ following the steps and base prosess of [Adeel Imran](https://medium.freecodecam
 has 2 configurations production and development
 the first command generate the assets, and with vizualizer plugin, it generates a statistics.html file in the dist/ folder for you. Open the file, and you’ll see a graphic at dist/statistics.html
 ```
-npm run prebuild
+npm run build
 ```
 after that you can run a dev hot server to develop
 ```
