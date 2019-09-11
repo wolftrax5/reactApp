@@ -13,6 +13,7 @@ following the steps and base prosess of [Adeel Imran](https://medium.freecodecam
 * Code Splitting
 * Prettie code implementing by the estlint come from [Wesbos](https://github.com/wesbos/eslint-config-wesbos)
 * Unit Test 
+* Create Docker image for your aplication
 
 ### Installing
 has 2 configurations production and development
@@ -38,3 +39,8 @@ will generate a coverage report based on all the tests it executes, and give you
 ```
 npm run test:coverage 
 ```
+### use of assets
+all the assets need to be set on dist folder by a build command, and you can access them by 
+`
+src="/assets/<folder on src/assets> /<resourse>"
+`
