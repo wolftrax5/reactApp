@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import wolfImage from '@assets/wolftrax-green.jpg'
 
 class App extends React.Component {
   state = {
@@ -41,7 +42,7 @@ class App extends React.Component {
         <h2>VERSION: {process.env.VERSION}</h2>
         <h2>PLATFORM: {process.env.PLATFORM}</h2>
         <h2>NODE_ENV: {process.env.NODE_ENV}</h2>
-        <img alt="wolftrax-green" src="/assets/images/wolftrax-green.jpg" className="app-header" />
+        <img alt="wolftrax-green" src={wolfImage} className="app-header" />
         <p>
           We are a most promising species, Mr. Spock, as predators go. Did you know that? I frequently have my doubts. I
           dont. Not any more. And maybe in a thousand years or so, we will be able to prove it.

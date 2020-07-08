@@ -31,9 +31,23 @@ module.exports = env => {
                 'css-loader',
                 'sass-loader'
               ]
+            },
+            // -- Assets
+            {
+              test: /\.(png|svg|jpg|gif)$/,
+              use: ['file-loader']
             }
           ]
         },
+        resolve: {
+        alias: {
+          "@": path.resolve(__dirname, '../src'),
+          "@assets": path.resolve(__dirname, '../src/static/assets'),
+          "@utils": path.resolve(__dirname, '../src/Utils/'),
+          "@ui": path.resolve(__dirname, '../src/UI/'),
+          "@containers": path.resolve(__dirname, '../src/containers/'),
+        }
+      },
         plugins: [
           new HtmlWebpackPlugin({
             template: './src/index.html',
@@ -43,7 +57,9 @@ module.exports = env => {
             'process.env.VERSION': JSON.stringify(env.VERSION),
             'process.env.PLATFORM': JSON.stringify(env.PLATFORM)
           }),
-          new CopyWebpackPlugin([ { from: 'src/static' } ]),
+          new CopyWebpackPlugin({
+            patterns: [ { from: 'src/static'} ]
+          }),
         ],
     }
   ])
