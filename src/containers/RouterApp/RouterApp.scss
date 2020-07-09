@@ -14,7 +14,7 @@ body {
   grid-template-rows: 1fr 6fr 1fr;
   grid-template-columns: 1fr 6fr;
   & > * {
-    background-color: saddlebrown;
+    background-color: salmon;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@ body {
       "footer";
     grid-template-rows: 1fr 1fr 10fr 1fr;
     grid-template-columns: 1fr;
-    background-color: red;
+    background-color: orangered;
   }
 }
 

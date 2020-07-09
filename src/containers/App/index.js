@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import wolfImage from '@assets/wolftrax-green.jpg'
+import wolfImage from '@assets/images/wolftrax-green.jpg'
 
 class App extends React.Component {
   state = {

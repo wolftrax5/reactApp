@@ -15,19 +15,24 @@ module.exports = env => {
   return merge([
       {
         entry: ['@babel/polyfill', APP_DIR],
+        output: {
+            path: path.resolve(__dirname, '../dist'),
+          },
         module: {
           rules: [
             {
-              test: /\.js$/,
+              test: /\.(js|jsx)$/,
               exclude: /node_modules/,
               use: {
                 loader: 'babel-loader'
               }
             },
             {
-              test: /\.scss$/,
+              test: /\.(s*)css$/,
               use: [
-                PLATFORM === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
+                {
+                  loader: PLATFORM === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
+                },
                 'css-loader',
                 'sass-loader'
               ]
@@ -58,9 +63,14 @@ module.exports = env => {
             'process.env.PLATFORM': JSON.stringify(env.PLATFORM)
           }),
           new CopyWebpackPlugin({
-            patterns: [ { from: 'src/static'} ]
+            patterns: [ { from: 'src/static/assets', to: '../dist/assets'} ]
           }),
         ],
+      devServer: {
+        port: 9001,
+        contentBase: APP_DIR,
+        watchContentBase: true,
+      }
     }
   ])
 };
