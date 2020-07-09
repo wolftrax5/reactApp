@@ -2,6 +2,7 @@
 // https://jestjs.io/docs/en/configuration.html
 
 module.exports = {
+  moduleDirectories: ['node_modules', 'src'],
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
 
@@ -16,6 +17,7 @@ module.exports = {
 
   moduleNameMapper: {
     '^.+\\.(css|less|scss)$': 'babel-jest',
+    '\\.(png|jpg|gif|ttf|eot|svg)$': 'babel-jest',
   },
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
